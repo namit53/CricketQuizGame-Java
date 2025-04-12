@@ -1,3 +1,4 @@
+import java.awt.Color;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -25,6 +26,7 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         setLayout(new BorderLayout());
 
         questionLabel = new JLabel("Question here");
+        questionLabel.setForeground(Color.BLUE);
         questionLabel.setFont(new Font("Arial", Font.BOLD, 16));
         add(questionLabel, BorderLayout.NORTH);
 
