@@ -9,7 +9,9 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         {"Which country won the first ICC T20 World Cup?", "India", "Australia", "Pakistan", "England", "1"},
         {"Who has taken the most wickets in Test cricket?", "Shane Warne", "Anil Kumble", "Muttiah Muralitharan", "James Anderson", "3"},
         {"Which Indian player is known as 'The Hitman'?", "Virat Kohli", "KL Rahul", "Rohit Sharma", "Hardik Pandya", "3"},
-        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"}
+        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"},
+        {"Which team won the 2023 Cricket World Cup?", "1. India", "2. England", "3. Australia", "4. New Zealand", "3"}
+
     };
 
     int currentQuestion = 0, score = 0;
