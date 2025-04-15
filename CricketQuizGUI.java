@@ -51,6 +51,12 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         loadQuestion();
 
         setVisible(true);
+	addWindowListener(new java.awt.event.WindowAdapter() {
+    @Override
+    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+        JOptionPane.showMessageDialog(null, "Thanks for playing!");
+    }
+});
     }
 
     void loadQuestion() {
@@ -84,6 +90,7 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new CricketQuizGUI();
+          JOptionPane.showMessageDialog(null, "Welcome to the Cricket Quiz Game!");
+    new CricketQuizGUI();
     }
 }
