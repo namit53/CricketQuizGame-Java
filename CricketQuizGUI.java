@@ -4,14 +4,15 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class CricketQuizGUI extends JFrame implements ActionListener {
+
     String[][] questions = {
         {"Who is the highest run scorer in international cricket?", "Sachin Tendulkar", "Virat Kohli", "Ricky Ponting", "MS Dhoni", "1"},
         {"Which country won the first ICC T20 World Cup?", "India", "Australia", "Pakistan", "England", "1"},
         {"Who has taken the most wickets in Test cricket?", "Shane Warne", "Anil Kumble", "Muttiah Muralitharan", "James Anderson", "3"},
         {"Which Indian player is known as 'The Hitman'?", "Virat Kohli", "KL Rahul", "Rohit Sharma", "Hardik Pandya", "3"},
-        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"}
-        {"Who has the highest individual score in ODIs?", "Rohit Sharma", "Martin Guptill", "Chris Gayle", "Virender Sehwag", "1"}
-        {"Which team won the 2023 Cricket World Cup?", "1. India", "2. England", "3. Australia", "4. New Zealand", "3"}
+        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"},
+        {"Who has the highest individual score in ODIs?", "Rohit Sharma", "Martin Guptill", "Chris Gayle", "Virender Sehwag", "1"},
+        {"Which team won the 2023 Cricket World Cup?", "India", "England", "Australia", "New Zealand", "3"}
     };
 
     int currentQuestion = 0, score = 0;
@@ -27,8 +28,8 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
         getContentPane().setBackground(new Color(240, 255, 255));
+
         questionLabel = new JLabel("Question here");
-        questionLabel.setForeground(Color.BLUE);
         questionLabel.setFont(new Font("Arial", Font.BOLD, 16));
         questionLabel.setForeground(Color.DARK_GRAY);
         add(questionLabel, BorderLayout.NORTH);
@@ -55,12 +56,13 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         loadQuestion();
 
         setVisible(true);
-	addWindowListener(new java.awt.event.WindowAdapter() {
-    @Override
-    public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-        JOptionPane.showMessageDialog(null, "Thanks for playing!");
-    }
-});
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                JOptionPane.showMessageDialog(null, "Thanks for playing!");
+            }
+        });
     }
 
     void loadQuestion() {
@@ -94,7 +96,7 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-          JOptionPane.showMessageDialog(null, "Welcome to the Cricket Quiz Game!");
-    new CricketQuizGUI();
+        JOptionPane.showMessageDialog(null, "Welcome to the Cricket Quiz Game!");
+        new CricketQuizGUI();
     }
 }
