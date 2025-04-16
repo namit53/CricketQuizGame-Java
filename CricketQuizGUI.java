@@ -8,7 +8,8 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         {"Which country won the first ICC T20 World Cup?", "India", "Australia", "Pakistan", "England", "1"},
         {"Who has taken the most wickets in Test cricket?", "Shane Warne", "Anil Kumble", "Muttiah Muralitharan", "James Anderson", "3"},
         {"Which Indian player is known as 'The Hitman'?", "Virat Kohli", "KL Rahul", "Rohit Sharma", "Hardik Pandya", "3"},
-        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"}
+        {"Where was the 2023 Cricket World Cup final held?", "Mumbai", "Ahmedabad", "Delhi", "Kolkata", "2"},
+        {"Who has the highest individual score in ODIs?", "Rohit Sharma", "Martin Guptill", "Chris Gayle", "Virender Sehwag", "1"}
     };
 
     int currentQuestion = 0, score = 0;
@@ -23,9 +24,10 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
-
+        getContentPane().setBackground(new Color(240, 255, 255));
         questionLabel = new JLabel("Question here");
         questionLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        questionLabel.setForeground(Color.DARK_GRAY);
         add(questionLabel, BorderLayout.NORTH);
 
         JPanel optionsPanel = new JPanel();
@@ -41,6 +43,9 @@ public class CricketQuizGUI extends JFrame implements ActionListener {
         add(optionsPanel, BorderLayout.CENTER);
 
         nextButton = new JButton("Next");
+        nextButton.setBackground(Color.BLUE);
+        nextButton.setForeground(Color.WHITE);
+        nextButton.setFont(new Font("Arial", Font.BOLD, 14));
         nextButton.addActionListener(this);
         add(nextButton, BorderLayout.SOUTH);
 
